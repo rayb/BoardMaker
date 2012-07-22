@@ -1,1 +1,3 @@
 <h1>Board Maker</h1>
+
+<%= @entries %>
