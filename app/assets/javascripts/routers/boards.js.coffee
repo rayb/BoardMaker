@@ -4,4 +4,5 @@ class BoardMaker.Routers.Boards extends Backbone.Router
     '' : 'index'
 
   index: ->
-    alert 'hi from index'
+    view = new BoardMaker.Views.BoardsIndex()
+    $('#container').html(view.render().el)
