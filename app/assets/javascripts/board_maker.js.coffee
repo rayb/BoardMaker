@@ -3,7 +3,9 @@ window.BoardMaker =
   Collections: {}
   Views: {}
   Routers: {}
-  init: -> alert 'Hello from Backbone!'
+  init: ->
+    new BoardMaker.Routers.Boards()
+    Backbone.history.start()
 
 $(document).ready ->
   BoardMaker.init()
