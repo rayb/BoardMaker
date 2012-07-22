@@ -5,7 +5,7 @@ class BoardMaker.Routers.Boards extends Backbone.Router
 
   initialize: ->
     @collection = new BoardMaker.Collections.Boards()
-    @collection.fetch()
+    @collection.reset($('#container').data('boards'))
 
   index: ->
     view = new BoardMaker.Views.BoardsIndex(collection: @collection)
