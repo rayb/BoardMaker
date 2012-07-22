@@ -2,6 +2,7 @@ class BoardMaker.Routers.Boards extends Backbone.Router
 
   routes:
     '' : 'index'
+    'boards/:id': 'show'
 
   initialize: ->
     @collection = new BoardMaker.Collections.Boards()
@@ -10,3 +11,6 @@ class BoardMaker.Routers.Boards extends Backbone.Router
   index: ->
     view = new BoardMaker.Views.BoardsIndex(collection: @collection)
     $('#container').html(view.render().el)
+
+  show: (id) ->
+    alert "Entry #{id}"

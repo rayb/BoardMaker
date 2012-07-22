@@ -13,4 +13,5 @@
     <!--<% end %>-->
 <!--</ul>-->
 
-<button id="draw">Something Happens</button>
+<button id="extra">Extra</button>
+<button id="kill">Delete</button>

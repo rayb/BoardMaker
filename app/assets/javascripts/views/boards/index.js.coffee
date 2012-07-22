@@ -4,6 +4,8 @@ class BoardMaker.Views.BoardsIndex extends Backbone.View
 
   events:
     'submit #new_board': "createBoard"
+    'click #extra' : "showExtra"
+    'click #kill' : "killLine"
 
   initialize: ->
     @collection.on('reset', @render, this )
@@ -22,4 +24,12 @@ class BoardMaker.Views.BoardsIndex extends Backbone.View
     event.preventDefault()
     @collection.create name: $('#new_board_name').val()
 
+  showExtra: (event) =>
+    event.preventDefault()
+#    alert 'showing extra'
+    @collection.showExtra()
+
+  killLine: (event) =>
+    event.preventDefault()
+    alert 'killing'
 
