@@ -3,6 +3,10 @@ class BoardMaker.Routers.Boards extends Backbone.Router
   routes:
     '' : 'index'
 
+  initialize: ->
+    @collection = new BoardMaker.Collections.Boards()
+    @collection.fetch()
+
   index: ->
-    view = new BoardMaker.Views.BoardsIndex()
+    view = new BoardMaker.Views.BoardsIndex(collection: @collection)
     $('#container').html(view.render().el)

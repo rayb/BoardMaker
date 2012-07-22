@@ -1,5 +1,7 @@
 BoardMaker::Application.routes.draw do
 
+  resources :boards
+
   scope "api" do
     resources :boards
   end
