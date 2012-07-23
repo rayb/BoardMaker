@@ -1,6 +1,7 @@
 class BoardMaker.Routers.Boards extends Backbone.Router
 
   routes:
+  # test in play search branch
     '' : 'index'
     'boards/:id': 'show'
 
