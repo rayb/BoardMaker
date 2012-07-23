@@ -4,6 +4,7 @@ class BoardMaker.Routers.Boards extends Backbone.Router
     '' : 'index'
     'boards/:id': 'show'
 
+
   initialize: ->
     @collection = new BoardMaker.Collections.Boards()
     @collection.reset($('#container').data('boards'))
@@ -13,4 +14,8 @@ class BoardMaker.Routers.Boards extends Backbone.Router
     $('#container').html(view.render().el)
 
   show: (id) ->
-    alert "Entry #{id}"
+    bye = @collection.get(id)
+    bye.destroy()
+    @collection.remove(bye)
+
+

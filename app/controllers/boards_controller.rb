@@ -2,6 +2,12 @@ class BoardsController < ApplicationController
 
   respond_to :json
 
+  def search
+    puts "xxxxxxxxxxxxxxxxx"
+    puts(params[:term])
+    respond_with Board.filtered_boards(params[:term])
+  end
+
   def index
     respond_with Board.all
   end

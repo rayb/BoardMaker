@@ -1,9 +1,11 @@
 BoardMaker::Application.routes.draw do
 
-  resources :boards
+  #resources :boards, :only => [:index, :show]
 
   scope "api" do
-    resources :boards
+    resources :boards do
+      get :search, :on => :collection, :controller => "boards"
+    end
   end
 
   root to: "main#index"

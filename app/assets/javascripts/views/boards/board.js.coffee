@@ -4,7 +4,8 @@ class BoardMaker.Views.Board extends Backbone.View
   tagName: 'li'
 
   events:
-    'click': 'showEntry'
+#    'click': 'showEntry'
+    'click': 'deleteEntry'
 
   initialize: ->
     @model.on('change', @render, this)
@@ -18,5 +19,8 @@ class BoardMaker.Views.Board extends Backbone.View
     $('.winner').removeClass('highlight')
     @$('.winner').addClass('highlight')
 
-  showEntry: ->
+#  showEntry: ->
+#    Backbone.history.navigate("boards/#{@model.get('id')}", true)
+
+  deleteEntry: ->
     Backbone.history.navigate("boards/#{@model.get('id')}", true)
