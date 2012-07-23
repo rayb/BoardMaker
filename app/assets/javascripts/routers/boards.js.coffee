@@ -4,6 +4,7 @@ class BoardMaker.Routers.Boards extends Backbone.Router
   # test in play search branch
     '' : 'index'
     'boards/:id': 'show'
+    'foo' : 'foo'
 
 
   initialize: ->
@@ -19,4 +20,6 @@ class BoardMaker.Routers.Boards extends Backbone.Router
     bye.destroy()
     @collection.remove(bye)
 
-
+  foo: =>
+    console.log "in foo"
+    alert "foo"

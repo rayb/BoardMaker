@@ -2,3 +2,5 @@
 <% if @board.get('show'): %>
     <span class = "winner">Showing...</span>
 <% end %>
+
+ <!--<a href="#/foo"> hello</a>-->

@@ -5,7 +5,7 @@ window.BoardMaker =
   Routers: {}
   init: ->
     new BoardMaker.Routers.Boards()
-    Backbone.history.start(pushState: true)
+    Backbone.history.start(pushState: false)
 
 $(document).ready ->
   BoardMaker.init()
